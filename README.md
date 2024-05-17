@@ -22,6 +22,7 @@ W0517 15:48:14.014222   12472 main.go:291] Unable to resolve the current Docker 
 ! StartHost failed, but will try again: creating host: create: precreate: This computer doesn't have VT-X/AMD-v enabled. Enabling it in the BIOS is mandatory
 * Creating virtualbox VM (CPUs=2, Memory=4000MB, Disk=20000MB) ...
 * Failed to start virtualbox VM. Running "minikube delete" may fix it: creating host: create: precreate: This computer doesn't have VT-X/AMD-v enabled. Enabling it in the BIOS is mandatory
+Besides that, my minikube always lost connection, which states that it has somekind of "handshakes error" or so.
 
 #  Create a Service:
 1. Expose the Pod to the public internet:![image](https://github.com/KenBalya/kubectl-tutorial/assets/124903836/170f4aa8-d4d0-4954-a606-e2ff1bdfc908)
@@ -47,7 +48,7 @@ W0517 15:48:14.014222   12472 main.go:291] Unable to resolve the current Docker 
 
 #    Reflection:
 
-1. o
+1. A Rolling Update strategy updates pods incrementally with zero downtime, replacing old pods with new ones one at a time. This ensures the application remains available during the update. In contrast, the Recreate strategy stops all existing pods before creating new ones, causing downtime while the new pods start. Rolling Update is preferred for continuous availability, while Recreate might be used for major updates where downtime is acceptable. The choice between them depends on the application's need for availability and the nature of the update.
 
 2. 
 3. ![image](https://github.com/KenBalya/kubectl-tutorial/assets/124903836/f66c7fb1-bfe3-4815-99c2-b585fdf63b23)
